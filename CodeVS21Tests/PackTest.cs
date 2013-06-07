@@ -14,5 +14,18 @@ namespace CodeVS21Tests
             var p = new Pack(4, vals);
             Assert.IsNotNull(p);
         }
+
+        [TestMethod]
+        public void DropLineTest()
+        {
+            var vals = new string[] { "0 2 0 0", "0 0 2 0", "0 1 3 0", "0 4 2 0" };
+            var p = new Pack(4, vals);
+            var line = p.DropLine(0);
+            Assert.AreEqual(0, line.Count);
+            line = p.DropLine(1);
+            Assert.AreEqual(4, line[0]);
+            Assert.AreEqual(1, line[1]);
+            Assert.AreEqual(2, line[2]);
+        }
     }
 }
