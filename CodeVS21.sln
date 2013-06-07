@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeVS21", "CodeVS21\CodeVS21.csproj", "{2BADACCC-F4D1-4EC3-98A1-4E35AA83FC5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeVS21Tests", "CodeVS21Tests\CodeVS21Tests.csproj", "{00D627C4-A93C-4B8B-A9BE-E667BFB7060E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BADACCC-F4D1-4EC3-98A1-4E35AA83FC5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BADACCC-F4D1-4EC3-98A1-4E35AA83FC5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BADACCC-F4D1-4EC3-98A1-4E35AA83FC5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BADACCC-F4D1-4EC3-98A1-4E35AA83FC5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00D627C4-A93C-4B8B-A9BE-E667BFB7060E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D627C4-A93C-4B8B-A9BE-E667BFB7060E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D627C4-A93C-4B8B-A9BE-E667BFB7060E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D627C4-A93C-4B8B-A9BE-E667BFB7060E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
