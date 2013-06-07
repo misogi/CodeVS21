@@ -1,6 +1,6 @@
 ﻿namespace CodeVS21
 {
-    class GameInfo
+    public class GameInfo
     {
         /// <summary>
         /// ブロック数
