@@ -5,13 +5,53 @@
         /// <summary>
         /// ブロック数
         /// </summary>
-        private int nums;
+        private int sum;
 
-        public int NumberOfBlocks
+        private int width;
+
+        private int height;
+
+        private int lengthOfPack;
+
+        private int numberOfPacks;
+
+        public int Sum
         {
             get
             {
-                return this.nums;
+                return this.sum;
+            }
+        }
+
+        public int Width
+        {
+            get
+            {
+                return this.width;
+            }
+        }
+
+        public int Height
+        {
+            get
+            {
+                return this.height;
+            }
+        }
+
+        public int LengthOfPack
+        {
+            get
+            {
+                return this.lengthOfPack;
+            }
+        }
+
+        public int NumberOfPacks
+        {
+            get
+            {
+                return this.numberOfPacks;
             }
         }
 
@@ -20,7 +60,11 @@
             string[] infodata = infostr.Split(' ');
             if (infodata.Length == 5)
             {
-                nums = int.Parse(infodata[4]);
+                this.width         = int.Parse(infodata[0]);
+                this.height        = int.Parse(infodata[1]);
+                this.lengthOfPack  = int.Parse(infodata[2]);
+                this.sum           = int.Parse(infodata[3]);
+                this.numberOfPacks = int.Parse(infodata[4]);
             }
         }
     }

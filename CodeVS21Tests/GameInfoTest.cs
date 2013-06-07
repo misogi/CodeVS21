@@ -12,6 +12,11 @@ namespace CodeVS21Tests
         {
             var g = new GameInfo("3 4 5 6 7");
             Assert.IsNotNull(g);
+            Assert.AreEqual(g.Width,         3);
+            Assert.AreEqual(g.Height,        4);
+            Assert.AreEqual(g.LengthOfPack,  5);
+            Assert.AreEqual(g.Sum,           6);
+            Assert.AreEqual(g.NumberOfPacks, 7);
         }
     }
 }

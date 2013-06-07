@@ -26,7 +26,7 @@ namespace CodeVS21
             file.Close();
 
             Console.WriteLine("2 0");
-            for (int i = 0; i < game.NumberOfBlocks; i++)
+            for (int i = 0; i < game.NumberOfPacks; i++)
             {
                 Console.WriteLine("2 0");
             }
