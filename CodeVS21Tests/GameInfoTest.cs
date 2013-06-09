@@ -18,5 +18,10 @@ namespace CodeVS21Tests
             Assert.AreEqual(g.Sum,           6);
             Assert.AreEqual(g.NumberOfPacks, 7);
         }
+
+        [TestMethod]
+        public void ReadPacksTest()
+        {
+        }
     }
 }

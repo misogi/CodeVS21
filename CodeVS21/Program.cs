@@ -13,23 +13,8 @@ namespace CodeVS21
             var str = Console.ReadLine();
             var game = new GameInfo(str);
 
-            // Example #4: Append new text to an existing file
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"D:\WriteLines2.txt", true);
-
-            string line;
-
-            for (int i = 0; i < 5000; i++)
-            {
-                line = Console.ReadLine();
-            }
-
-            file.Close();
-
-            Console.WriteLine("2 0");
-            for (int i = 0; i < game.NumberOfPacks; i++)
-            {
-                Console.WriteLine("2 0");
-            }
+            game.ReadPacks();
+            game.WriteAnswers();
         }
     }
 }
