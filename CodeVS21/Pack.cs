@@ -9,7 +9,15 @@
 
         private int length;
 
-        public Pack(int length, string[] blockValues)
+        public int Length
+        {
+            get
+            {
+                return this.length;
+            }
+        }
+
+    public Pack(int length, string[] blockValues)
         {
             if (blockValues.Length != length)
             {

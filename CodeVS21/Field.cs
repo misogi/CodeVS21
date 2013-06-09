@@ -1,5 +1,8 @@
 ﻿namespace CodeVS21
 {
+    using System.Collections;
+    using System.Collections.Generic;
+
     /// <summary>
     /// The field.
     /// </summary>
@@ -10,7 +13,7 @@
         /// <summary>
         /// The cell.
         /// </summary>
-        private int[,] cells;
+        private List<int>[] cells;
 
         private int height;
 
@@ -30,17 +33,34 @@
         public Field(int width, int height)
         {
             this.height = height;
-            this.cells  = new int[width, height];
+            this.cells  = new List<int>[width];
+            for(int i=0; i < cells.Length; i++)
+            {
+                this.cells[i] = new List<int>();
+            }
         }
 
         public void Fall(Pack pack, int position, int rotate)
         {
-            
+            for (int i = 0; i < pack.Length; i++)
+            {
+                List<int> dropLine = pack.DropLine(i);
+                if (dropLine.Count == 0)
+                {
+                    continue;
+                }
+                this.cells[position + i].AddRange(dropLine);
+            }
         }
 
         public int ValueOfCell(int column, int row)
         {
-            return cells[column, row];
+            var line = cells[column];
+            if (row >= line.Count)
+            {
+                return 0;
+            }
+            return line[row];
         }
 
         public int HeightOfLine(int column)
@@ -48,7 +68,7 @@
             int lineheight = 0;
             for (int i = 0; i < this.height; i++ )
             {
-                if (cells[column, i] > 0)
+                if (cells[column][i] > 0)
                 {
                     lineheight = i;
                 }
